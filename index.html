@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<!--Header and Imports-->
 		<title>Fancify Shamcify</title>
-
-		<!-- link to your script file here -->
-		
+		<script src="fancifymytext.js"></script>
 	</head>
 
 	<body>
@@ -13,18 +12,25 @@
 		<!-- Text field set -->
 		<fieldset>
 			<legend>Text</legend>
-			<textarea rows="4" cols="30"></textarea>
+			<textarea id="textArea" rows="4" cols="30"></textarea>
 		</fieldset>
 
 		<!-- Fancify field set -->
 		<fieldset>
 			<legend>Fancify</legend>
-			<button>Bigger!</button><br><br>
-			<input type="radio" id="fancy" name="style" value="fancy">
+			<!--Bigger! Button-->
+			<button onclick="makeTextBigger()">Bigger!</button><br><br>
+			
+			<!--FancyShmancy Radio Option 1 (Bold, Underline, Blue Font)-->
+			<input type="radio" id="fancy" name="style" value="fancy" onchange="applyStyle()">
 			<label for="fancy">FancyShmancy</label><br>
-			<input type="radio" id="boring" name="style" value="boring">
-			<label for="boring">BoringBetty</label>
+			
+			<!--BoringBetty Radio Option 2 (Revert Text Font)-->
+			<input type="radio" id="boring" name="style" value="boring" onchange="applyStyle()">
+			<label for="boring">BoringBetty</label><br><br>
+			
+			<!--Moo Button-->
+			<button onclick="mooifyText()">Moo</button>
 		</fieldset>
-		
 	</body>
 </html>
